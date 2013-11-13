@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script type="text/javascript">
+
+function toggleFormElements(bDisabled) {
+	var inputs = document.getElementsByTagName("input");
+	for (var i = 0; i < inputs.length; i++) {
+		inputs[i].disabled = bDisabled;	
+	}
+	var selects = document.getElementsByTagName("select");
+	for (var i = 0; i < selects.length; i++) {
+		selects[i].disabled = bDisabled;	
+	}
+	var textareas = document.getElementsByTagName("textarea");
+	for (var i = 0; i < textareas.length; i++) {
+		textareas[i].disabled = bDisabled;	
+	}
+	var buttons = document.getElementsByTagName("button");
+	for (var i = 0; i < buttons.length; i++) {
+		buttons[i].disabled = bDisabled;	
+	}
+}
+
+</script>
+</head>
+
+<body onload="javascript:toggleFormElements(true)"><h1>Toggle form elements</h1>
+
+
+
+<form method="post" name="form1" id="form1">
+	input text 
+	<label>
+	<input type="text" id="textfield" name="textfield" />
+	</label>
+	<p>input checkbox	
+		<label>
+		<input type="checkbox" id="checkbox" name="checkbox" />
+		</label>
+	</p>
+	<p>input radio 
+		<label>
+		<input type="radio" value="radio" id="radio" name="radio" />
+		</label>
+	</p>
+	<p>input select 
+		<label>
+		<select id="select" name="select">
+		</select>
+		</label>
+	</p>
+	<p>input textarea 
+		<label>
+		<textarea rows="5" cols="45" id="textarea" name="textarea"></textarea>
+		</label>
+	</p>
+	<p>input button <button>button here</button></p>
+	<hr />
+	
+	<a href="javascript:toggleFormElements(false);">enable all</a>
+	<a href="javascript:toggleFormElements(true);">disable all</a>
+	
+</form></body>
+</html>
