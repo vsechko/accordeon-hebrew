@@ -37,12 +37,7 @@
 <input type="text" id="salary" class="decimal" />
 <script>
 $(function () {
-      $('#shum').bind('paste', function () {
-        var self = this;
-        setTimeout(function () {
-            if (!/^\d*(\.\d{1,2})+$/.test($(self).val())) $(self).val('');
-        }, 0);
-    });
+  
     
     $('.decimal').keypress(function (e) {
         var character = String.fromCharCode(e.keyCode)
