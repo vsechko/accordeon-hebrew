@@ -53,4 +53,17 @@ $(function () {
         return  pointIndex >= 0 && pointIndex < value.length - x;
     }
 });
+
+$( function() {
+    $('.two-digits').keyup(function(){
+        if($(this).val().indexOf('.')!=-1){         
+            if($(this).val().split(".")[1].length > 2){                
+                if( isNaN( parseFloat( this.value ) ) ) return;
+                this.value = parseFloat(this.value).toFixedDown(2);
+            }  
+         }            
+         return this; //for chaining
+    });
+});
+
 </script>
